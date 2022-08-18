@@ -1,1 +1,18 @@
-sdasdxzx
+<table mat-table [dataSource]="eventInform">
+
+    <ng-container matColumnDef="chek">
+        <th mat-header-cell *matHeaderCellDef> chek </th>
+        <!-- <td> </td> //chekbox -->
+    </ng-container>
+
+    <ng-container matColumnDef="event">
+        <td mat-cell *matCellDef="let eventInform"> {{eventInform.event}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+        <td mat-cell *matCellDef="let eventInform"> {{eventInform.day && eventInform.month && eventInform.year}} </td>
+    </ng-container>
+
+
+
+</table>
